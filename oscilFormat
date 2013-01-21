@@ -1,0 +1,11 @@
+first address byte,
+
+Then 0000 00BB
+BB:
+00 = Input
+01 = Output
+10 = polarity inversion ( 0 => 1 )
+11 = Configuration (high impedance output driver)
+
+Then data: each bit corresponds to each output
+

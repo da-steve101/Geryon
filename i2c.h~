@@ -1,0 +1,53 @@
+/*******************************************************************
+\author: Stephen Tridgell
+\file: i2c.h
+\date: 04/09/2012
+This is the header file for i2c.c
+********************************************************************/
+
+
+/*********************************************************
+Definitions
+*********************************************************/
+
+//define Addresses
+#define DIGITAL_IO_ADDRESS 0x18
+#define VARIABLE_PSU_ADDRESS 0x2C
+#define FUNCTION_GEN_ADDRESS_DAC 0x0E
+#define FUNCTION_GEN_ADDRESS_POT 0x2F
+#define OSCILLOSCOPE_ADDRESS 0x1F
+
+// POT commands
+#define POT_WRITE 0xA0
+#define POT_OFFSET 0x03
+#define POT_ATTENUATE 0x01
+
+// 8 bit numbers
+#define MAX 0xFF
+#define MID 0x7F
+#define MIN 0x00
+
+#define NULL 0
+
+/*********************************************************
+Functions
+ *********************************************************/
+
+/********************************************************************************************************
+This function initializes the I2C1, if FastSpeed is true, the I2C is set to 400kbps otherwise it is set to 100kbps
+ ******************************************************************************************************/
+void I2C_init( tBoolean FastSpeed);
+
+/********************************************************************************************************
+This function Sends "length" bytes of data over the I2C to the "slaveAddress"
+ *******************************************************************************************************/
+void I2C_Master_Send(unsigned char slaveAddress, unsigned char * data, unsigned int length);
+
+/********************************************************************************************************
+This function recieves "length" bytes of data over the I2C to the "slaveAddress"
+ *******************************************************************************************************/
+unsigned char * I2C_Master_Read(unsigned char slaveAddress, unsigned char * readData, unsigned int length);
+
+int OscControl(unsigned char data);
+int FunctInit(void);
+
