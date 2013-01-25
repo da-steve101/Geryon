@@ -35,6 +35,7 @@ Includes
 //#define TESTING 1
 
 #ifdef TESTING
+
 // Interupt and error handlers, leave blank for now
 void
 SysTickIntHandler(void){
@@ -47,6 +48,7 @@ __error__(char *pcFilename, unsigned long ulLine){
   while(1){
   }
 }
+
 #endif
 
 void

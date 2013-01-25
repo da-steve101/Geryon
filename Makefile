@@ -98,6 +98,7 @@ ${COMPILER}/qs-scope.axf: ${COMPILER}/startup_${COMPILER}.o
 ${COMPILER}/qs-scope.axf: ${COMPILER}/uartstdio.o
 ${COMPILER}/qs-scope.axf: ${COMPILER}/usb_host.o
 ${COMPILER}/qs-scope.axf: ${COMPILER}/i2c.o
+${COMPILER}/qs-scope.axf: ${COMPILER}/dummyMultimeterInterface.o
 ${COMPILER}/qs-scope.axf: ${COMPILER}/usb_device.o
 ${COMPILER}/qs-scope.axf: ${COMPILER}/usbdescriptors.o
 ${COMPILER}/qs-scope.axf: ${COMPILER}/ustdlib.o
